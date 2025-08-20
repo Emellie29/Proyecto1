@@ -67,6 +67,7 @@ class Ordenador:
             print("Producto eliminado correctamente.")
         except ProductoNoExisteError:
             print("No se encontró el producto.")
+# listar_productos
 def listar_productos(inventario, ordenador):
     productos = inventario.obtener_lista()
     if not productos:
@@ -78,5 +79,5 @@ def listar_productos(inventario, ordenador):
         print(f"\nProductos ordenados por {criterio}:")
         for p in ordenados:
             print("-", p)
-    except ValueError as j:
-        print(f"Error: {j}")
+    except ValueError as ve:
+        print(f"Error: {ve}")
